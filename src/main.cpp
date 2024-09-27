@@ -880,7 +880,7 @@ void setup()
     }
 #endif
 
-#if defined(RF95_IRQ)
+#if defined(RF95_IRQ) && !defined(RADIOLIB_EXCLUDE_SX127X)
     if (!rIf) {
         rIf = new RF95Interface(RadioLibHAL, LORA_CS, RF95_IRQ, RF95_RESET, RF95_DIO1);
         if (!rIf->init()) {
@@ -996,7 +996,7 @@ void setup()
     }
 #endif
 
-#if defined(USE_SX1280)
+#if defined(USE_SX1280) && !defined(RADIOLIB_EXCLUDE_SX128X)
     if (!rIf) {
         rIf = new SX1280Interface(RadioLibHAL, SX128X_CS, SX128X_DIO1, SX128X_RESET, SX128X_BUSY);
         if (!rIf->init()) {
