@@ -2597,7 +2597,7 @@ void DebugInfo::drawFrameWiFi(OLEDDisplay *display, OLEDDisplayUiState *state, i
     }
 #else
     else {
-        display->drawString(x, y + FONT_HEIGHT_SMALL * 1, "Unkown status: " + String(WiFi.status()));
+        display->drawString(x, y + FONT_HEIGHT_SMALL * 1, "Unknown status: " + String(WiFi.status()));
     }
 #endif
 
